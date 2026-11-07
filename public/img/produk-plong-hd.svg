@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" role="img" aria-label="Plastik HD plong">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9bd2"/><stop offset=".5" stop-color="#d64bd6"/><stop offset="1" stop-color="#6a2aa8"/></linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<mask id="m"><rect width="300" height="340" fill="#fff"/><rect x="112" y="46" width="76" height="26" rx="13" fill="#000"/></mask>
+</defs>
+<path d="M50 24 H250 L258 320 Q150 332 42 320Z" fill="url(#g)" mask="url(#m)"/>
+<path d="M50 24 H250" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+<rect x="112" y="46" width="76" height="26" rx="13" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>
+<path d="M80 40 Q72 170 82 312" stroke="url(#sh)" stroke-width="18" fill="none"/>
+<path d="M50 96 H250" stroke="#fff" stroke-opacity=".15" stroke-width="2" stroke-dasharray="6 6"/>
+<g transform="translate(150 200)" fill="#fff"><path d="M-22 -20h22c7 0 11 4 11 9 0 4-2 7-4 8h-29z"/><path d="M22 20H0c-7 0-11-4-11-9 0-4 2-7 4-8h29z" fill-opacity=".8"/></g>
+<text x="150" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="3" fill="#fff" fill-opacity=".85">YOUR BRAND</text>
+</svg>

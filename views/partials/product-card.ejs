@@ -1,0 +1,11 @@
+<article class="card card-hover product-card reveal" data-material="<%= p.material %>">
+  <div class="product-media">
+    <span class="badge <%= p.material %>"><%= p.material.toUpperCase() %></span>
+    <img src="<%= p.image %>" alt="<%= p.name %> – plastik <%= p.material.toUpperCase() %> SONINDOGRAFIKA" width="300" height="340" loading="lazy">
+  </div>
+  <div class="product-body">
+    <h3><%= p.name %></h3>
+    <p><%= p.desc %></p>
+    <ul class="chips"><% p.specs.forEach(function (s) { %><li><%= s %></li><% }) %></ul>
+  </div>
+</article>

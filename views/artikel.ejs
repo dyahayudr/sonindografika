@@ -1,0 +1,33 @@
+<%- include('partials/head') %>
+
+<section class="page-hero">
+  <div class="container">
+    <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Artikel</li></ol>
+    <h1 class="display">Artikel &amp;<br>Panduan</h1>
+    <p class="lead">Tips memilih, memesan, dan menggunakan plastik kemasan HD &amp; PP untuk usaha Anda.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:48px">
+  <div class="container">
+    <div class="article-grid">
+      <% const first = articles[0]; %>
+      <article class="card card-hover article-featured reveal">
+        <div class="art" aria-hidden="true"><img src="/img/produk-pp-bening.svg" alt="" width="300" height="340"></div>
+        <div class="article-card" style="padding:0">
+          <div class="meta">
+            <span class="cat">Terbaru · <%= first.category %></span>
+            <time datetime="<%= first.date %>"><%= formatDate(first.date) %></time>
+            <span><%= first.readMinutes %> menit baca</span>
+          </div>
+          <h3><a href="/artikel/<%= first.slug %>"><%= first.title %></a></h3>
+          <p><%= first.description %></p>
+          <span class="link-arrow">Baca artikel <%- include('partials/icon', { name: 'arrow', s: 18 }) %></span>
+        </div>
+      </article>
+      <% articles.slice(1).forEach(function (a) { %><%- include('partials/article-card', { a: a }) %><% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

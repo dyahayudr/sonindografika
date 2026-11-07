@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <% if (typeof noindex !== 'undefined' && noindex) { %><meta name="robots" content="noindex"><% } else { %><meta name="robots" content="index, follow, max-image-preview:large"><% } %>
+  <link rel="canonical" href="<%= canonical %>">
+  <meta name="theme-color" content="#0b0612">
+  <meta name="geo.region" content="ID-JK">
+  <meta name="geo.placename" content="Jabodetabek">
+
+  <meta property="og:type" content="<%= typeof ogType !== 'undefined' ? ogType : 'website' %>">
+  <meta property="og:site_name" content="<%= site.name %>">
+  <meta property="og:locale" content="<%= site.locale %>">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= description %>">
+  <meta property="og:url" content="<%= canonical %>">
+  <meta property="og:image" content="<%= ogImage %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=<%= assetVersion %>">
+
+  <% (schemas || []).forEach(function (schema) { %>
+  <script type="application/ld+json"><%- JSON.stringify(schema).replace(/</g, '\\u003c') %></script>
+  <% }) %>
+</head>
+<body>
+<a class="skip-link" href="#main">Langsung ke konten</a>
+<div class="bg-glow" aria-hidden="true"></div>
+<%- include('header') %>
+<main id="main">

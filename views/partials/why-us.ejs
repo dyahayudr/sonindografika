@@ -1,0 +1,20 @@
+<%
+const features = [
+  { icon: 'factory', title: 'Langsung dari Produsen', text: 'Diproduksi sendiri tanpa perantara, sehingga harga lebih kompetitif dan kualitas terkontrol.' },
+  { icon: 'shield', title: 'Kualitas Bahan Terjaga', text: 'Bahan HD & PP pilihan dengan ketebalan konsisten — kuat, tidak mudah sobek, dan rapi.' },
+  { icon: 'palette', title: 'Custom Sablon Logo', text: 'Ukuran, warna, dan sablon logo bisa disesuaikan untuk memperkuat identitas brand Anda.' },
+  { icon: 'truck', title: 'Pengiriman Jabodetabek', text: 'Fokus melayani Jakarta, Bogor, Depok, Tangerang, dan Bekasi — lebih cepat dan hemat ongkir.' },
+  { icon: 'chat', title: 'Konsultasi Gratis', text: 'Bingung pilih bahan atau ukuran? Tim kami bantu rekomendasikan sesuai produk dan anggaran.' },
+  { icon: 'tag', title: 'Harga Transparan', text: 'Penawaran jelas di awal sesuai spesifikasi dan jumlah, tanpa biaya tersembunyi.' },
+];
+%>
+<div class="feature-grid">
+  <% features.forEach(function (f, i) { %>
+  <article class="card card-hover feature reveal" style="transition-delay: <%= (i % 3) * 80 %>ms">
+    <span class="num">0<%= i + 1 %></span>
+    <div class="feature-icon"><%- include('icon', { name: f.icon, s: 24 }) %></div>
+    <h3><%= f.title %></h3>
+    <p><%= f.text %></p>
+  </article>
+  <% }) %>
+</div>

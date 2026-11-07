@@ -1,0 +1,10 @@
+<article class="card card-hover article-card reveal">
+  <div class="meta">
+    <span class="cat"><%= a.category %></span>
+    <time datetime="<%= a.date %>"><%= formatDate(a.date) %></time>
+    <span><%= a.readMinutes %> menit baca</span>
+  </div>
+  <h3><a href="/artikel/<%= a.slug %>"><%= a.title %></a></h3>
+  <p><%= a.description %></p>
+  <span class="link-arrow">Baca artikel <%- include('icon', { name: 'arrow', s: 18 }) %></span>
+</article>

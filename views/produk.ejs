@@ -1,0 +1,102 @@
+<%- include('partials/head') %>
+
+<section class="page-hero">
+  <div class="container">
+    <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Produk</li></ol>
+    <h1 class="display">Produk<br>Kami</h1>
+    <p class="lead">Kantong plastik HD dan PP untuk berbagai kebutuhan usaha — tersedia polos maupun sablon logo custom.</p>
+  </div>
+</section>
+
+<!-- Katalog -->
+<section class="section" style="padding-top:48px" aria-labelledby="katalog-title">
+  <div class="container">
+    <h2 id="katalog-title" class="sr-only" style="position:absolute;left:-9999px">Katalog produk</h2>
+    <div class="filter-bar" role="group" aria-label="Filter bahan" data-filter>
+      <button type="button" data-value="all" aria-pressed="true">Semua</button>
+      <button type="button" data-value="hd" aria-pressed="false">Plastik HD</button>
+      <button type="button" data-value="pp" aria-pressed="false">Plastik PP</button>
+    </div>
+    <div class="product-grid">
+      <% products.forEach(function (p) { %><%- include('partials/product-card', { p: p }) %><% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- Detail bahan -->
+<section class="section" style="padding-top:0" aria-labelledby="bahan-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Mengenal Bahan</span>
+        <h2 id="bahan-title" class="h-section" style="margin-top:18px">Kelebihan &amp; kegunaan <em>HD dan PP</em></h2>
+        <p class="lead">Pahami karakter masing-masing bahan agar kemasan sesuai dengan produk Anda.</p>
+      </div>
+    </div>
+
+    <% Object.values(materials).forEach(function (m) { %>
+    <article id="<%= m.key %>" class="card material-detail <%= m.key %> reveal" style="scroll-margin-top: calc(var(--header-h) + 20px)">
+      <div class="md-visual">
+        <span class="badge <%= m.key %>"><%= m.key.toUpperCase() %></span>
+        <img src="/img/<%= m.key === 'hd' ? 'produk-kresek-hd' : 'produk-pp-bening' %>.svg" alt="Contoh <%= m.name %>" width="300" height="340" loading="lazy">
+      </div>
+      <div class="md-body">
+        <h2><%= m.name %></h2>
+        <p class="sub"><%= m.fullName %></p>
+        <p><%= m.summary %></p>
+        <div class="md-cols">
+          <div>
+            <h3>Kelebihan</h3>
+            <ul class="check-list"><% m.advantages.forEach(function (x) { %><li><%- include('partials/icon', { name: 'check' }) %><%= x %></li><% }) %></ul>
+          </div>
+          <div>
+            <h3>Kegunaan</h3>
+            <ul class="check-list"><% m.uses.forEach(function (x) { %><li><%- include('partials/icon', { name: 'leaf' }) %><%= x %></li><% }) %></ul>
+          </div>
+        </div>
+        <a class="btn btn-violet" style="margin-top:30px" href="<%= site.whatsappLink('Halo SONINDOGRAFIKA, saya ingin tanya harga ' + m.name + '.') %>" target="_blank" rel="noopener">Tanya Harga <%= m.name %></a>
+      </div>
+    </article>
+    <% }) %>
+  </div>
+</section>
+
+<!-- Tabel perbandingan -->
+<section class="section" style="padding-top:0" aria-labelledby="banding-title">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Perbandingan</span>
+      <h2 id="banding-title" class="h-section" style="margin-top:18px">HD atau PP, <em>mana yang cocok?</em></h2>
+    </div>
+    <div class="table-wrap card reveal" style="border-radius:var(--radius)">
+      <table class="compare-table">
+        <thead><tr><th>Karakter</th><th>Plastik HD</th><th>Plastik PP</th></tr></thead>
+        <tbody>
+          <tr><td>Tampilan</td><td>Doff / buram</td><td>Bening &amp; mengkilap</td></tr>
+          <tr><td>Kekuatan menahan beban</td><td>★★★★★</td><td>★★★☆☆</td></tr>
+          <tr><td>Ketahanan panas</td><td>★★★☆☆</td><td>★★★★☆</td></tr>
+          <tr><td>Kejernihan</td><td>★★☆☆☆</td><td>★★★★★</td></tr>
+          <tr><td>Hasil sablon</td><td>Sangat baik</td><td>Baik</td></tr>
+          <tr><td>Cocok untuk</td><td>Belanja, laundry, sampah</td><td>Makanan, pakaian, display</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="text-align:center;margin-top:20px">Masih ragu? <a class="link-arrow" href="/artikel/perbedaan-plastik-hd-dan-pp">Baca panduan lengkap HD vs PP <%- include('partials/icon', { name: 'arrow', s: 16 }) %></a></p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="card cta-band reveal">
+      <div>
+        <h2 class="h-section">Butuh ukuran atau sablon khusus?</h2>
+        <p>Kirim detail kebutuhan Anda, kami siapkan rekomendasi dan penawaran terbaik.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-white btn-lg" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener"><%- include('partials/icon', { name: 'whatsapp', s: 20 }) %> Minta Penawaran</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,71 @@
+<%- include('partials/head') %>
+
+<section class="page-hero">
+  <div class="container">
+    <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Tentang</li></ol>
+    <h1 class="display">Tentang<br>Kami</h1>
+    <p class="lead">Mengenal <%= site.name %> — produsen plastik HD &amp; PP yang tumbuh bersama pelaku usaha di Jabodetabek.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:48px">
+  <div class="container about-grid">
+    <div class="card split-visual reveal" style="position:sticky; top:calc(var(--header-h) + 24px)">
+      <img src="/img/hero-packaging.svg" alt="Produk plastik HD dan PP SONINDOGRAFIKA" width="520" height="540" loading="lazy">
+    </div>
+    <div class="prose reveal">
+      <span class="eyebrow">Profil Perusahaan</span>
+      <h2 class="h-section" style="margin:18px 0 24px">Kemasan yang kuat untuk <em>usaha yang terus tumbuh</em></h2>
+      <p><strong><%= site.name %></strong> adalah perusahaan yang bergerak di bidang produksi kantong plastik berbahan <strong>HD (High Density Polyethylene)</strong> dan <strong>PP (Polypropylene)</strong>. Kami hadir untuk menjawab kebutuhan kemasan pelaku usaha — mulai dari toko kelontong, minimarket, UMKM kuliner, butik, laundry, apotek, hingga perusahaan dan industri.</p>
+      <p>Kami percaya kemasan bukan sekadar pembungkus. Kantong plastik yang kuat menjaga produk tetap aman sampai ke tangan pelanggan, sementara kemasan yang rapi dan bersablon logo membantu brand Anda dikenal lebih luas. Karena itu, setiap produk kami dibuat dengan memperhatikan kualitas bahan, ketebalan yang konsisten, dan hasil cetak yang rapi.</p>
+      <p>Sebagai produsen, kami melayani pesanan <strong>plastik polos maupun sablon custom</strong> dengan ukuran, ketebalan, dan warna yang dapat disesuaikan. Proses pemesanan dibuat sederhana: konsultasi, penawaran, persetujuan desain, produksi, lalu pengiriman langsung ke lokasi Anda.</p>
+      <p>Fokus layanan kami adalah wilayah <strong>Jabodetabek — Jakarta, Bogor, Depok, Tangerang, dan Bekasi</strong>. Kedekatan lokasi memungkinkan kami memberikan respon yang lebih cepat, pengiriman yang lebih efisien, serta layanan repeat order yang praktis untuk menjaga stok kemasan Anda tetap aman.</p>
+
+      <ul class="area-list" aria-label="Area layanan">
+        <% site.areas.forEach(function (a) { %><li><%- include('partials/icon', { name: 'pin', s: 16 }) %><%= a %></li><% }) %>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container vm-grid">
+    <article class="card vm reveal">
+      <div class="feature-icon"><%- include('partials/icon', { name: 'sparkle', s: 24 }) %></div>
+      <h3>Visi</h3>
+      <p>Menjadi produsen plastik kemasan pilihan utama pelaku usaha di Jabodetabek yang dikenal karena kualitas, ketepatan, dan pelayanan yang ramah.</p>
+    </article>
+    <article class="card vm reveal">
+      <div class="feature-icon"><%- include('partials/icon', { name: 'check', s: 24 }) %></div>
+      <h3>Misi</h3>
+      <ul>
+        <li>Menghasilkan plastik HD &amp; PP dengan kualitas bahan yang konsisten.</li>
+        <li>Memberikan harga kompetitif langsung dari produsen.</li>
+        <li>Membantu brand pelanggan tampil lebih profesional lewat sablon custom.</li>
+        <li>Mengirim pesanan tepat waktu ke seluruh Jabodetabek.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Keunggulan Kami</span>
+      <h2 id="why-title" class="h-section" style="margin-top:18px">Kenapa memilih <em><%= site.name %></em>?</h2>
+      <p class="lead">Enam alasan pelaku usaha mempercayakan kebutuhan kemasan plastiknya kepada kami.</p>
+    </div>
+    <%- include('partials/why-us') %>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="stats-strip reveal">
+      <% site.stats.forEach(function (s) { %><div><strong><%= s.value %></strong><span><%= s.label %></span></div><% }) %>
+      <div><strong>HD &amp; PP</strong><span>Dua bahan utama</span></div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

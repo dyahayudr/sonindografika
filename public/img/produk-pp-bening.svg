@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" role="img" aria-label="Plastik PP bening berisi roti">
+<defs>
+<linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd59a"/><stop offset="1" stop-color="#d9853b"/></linearGradient>
+<linearGradient id="bag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfefff" stop-opacity=".35"/><stop offset=".5" stop-color="#9fe0ff" stop-opacity=".12"/><stop offset="1" stop-color="#8b7bff" stop-opacity=".3"/></linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+<path d="M88 180 Q86 130 150 128 Q214 130 212 180 L214 292 Q150 304 86 292Z" fill="url(#b)"/>
+<path d="M98 160 Q150 150 202 160" stroke="#fff3df" stroke-opacity=".7" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M110 200 l14 -14 M140 196 l14 -14 M170 200 l14 -14" stroke="#a65a1f" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+<path d="M60 40 H240 L246 318 Q150 330 54 318Z" fill="url(#bag)" stroke="#e6f7ff" stroke-opacity=".7" stroke-width="2"/>
+<rect x="60" y="40" width="180" height="22" fill="#fff" fill-opacity=".18"/>
+<path d="M60 62 H240" stroke="#fff" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="3 4"/>
+<path d="M84 70 Q76 190 84 310" stroke="url(#sh)" stroke-width="12" fill="none"/>
+<path d="M218 90 Q224 150 220 200" stroke="#fff" stroke-opacity=".5" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M140 22 Q150 10 160 22 L156 40 H144Z" fill="#ff5fa8"/>
+</svg>

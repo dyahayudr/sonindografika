@@ -1,0 +1,67 @@
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cta reveal">
+      <div>
+        <h2 class="footer-cta-title">Butuh plastik untuk usaha Anda?</h2>
+        <p>Konsultasi gratis, penawaran cepat, dan pengiriman ke seluruh Jabodetabek.</p>
+      </div>
+      <a class="btn btn-white" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">
+        <%- include('icon', { name: 'whatsapp', s: 20 }) %> Chat WhatsApp
+      </a>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <img src="/img/logo.svg" alt="" width="30" height="30" loading="lazy">
+          <span><%= site.name %></span>
+        </a>
+        <p>Produsen kantong plastik HD &amp; PP — polos maupun sablon custom — untuk usaha di <%= site.areas.join(', ') %>.</p>
+        <ul class="social-row" aria-label="Media sosial">
+          <% site.socials.forEach(function (s) { %>
+            <li><a href="<%= s.url %>" target="_blank" rel="noopener" aria-label="<%= s.name %>"><%- include('icon', { name: s.icon, s: 18 }) %></a></li>
+          <% }) %>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Menu</h3>
+        <ul class="footer-links">
+          <% nav.forEach(function (item) { %><li><a href="<%= item.href %>"><%= item.label %></a></li><% }) %>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Kontak</h3>
+        <ul class="footer-contact">
+          <li><%- include('icon', { name: 'whatsapp', s: 18 }) %><a href="<%= site.whatsappLink() %>" target="_blank" rel="noopener"><%= site.whatsappDisplay %></a></li>
+          <li><%- include('icon', { name: 'phone', s: 18 }) %><a href="tel:<%= site.phone.replace(/\s/g, '') %>"><%= site.phone %></a></li>
+          <li><%- include('icon', { name: 'mail', s: 18 }) %><a href="mailto:<%= site.email %>"><%= site.email %></a></li>
+          <li><%- include('icon', { name: 'pin', s: 18 }) %><span><%= site.fullAddress %></span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Jam Operasional</h3>
+        <ul class="footer-hours">
+          <% site.hours.forEach(function (h) { %><li><span><%= h.days %></span><span><%= h.time %></span></li><% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <%= year %> <%= site.name %>. Seluruh hak cipta dilindungi.</p>
+      <p>Plastik HD · Plastik PP · Sablon Custom · Jabodetabek</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <%- include('icon', { name: 'whatsapp', s: 28 }) %>
+</a>
+
+<script src="/js/main.js?v=<%= assetVersion %>" defer></script>
+</body>
+</html>

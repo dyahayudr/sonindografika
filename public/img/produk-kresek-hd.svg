@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" role="img" aria-label="Kantong kresek plastik HD">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a48bff"/><stop offset=".55" stop-color="#6a4cf0"/><stop offset="1" stop-color="#3b2391"/></linearGradient>
+<linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8fd0"/><stop offset="1" stop-color="#ff5fa8" stop-opacity="0"/></linearGradient>
+</defs>
+<path d="M44 322 L40 70 Q40 22 74 22 L96 22 Q108 22 108 36 L108 86 Q150 116 192 86 L192 36 Q192 22 204 22 L226 22 Q260 22 260 70 L256 322 Q150 334 44 322Z" fill="url(#g)"/>
+<path d="M44 322 L40 70 Q40 22 74 22 L96 22 Q108 22 108 36 L108 86 Q150 116 192 86 L192 36 Q192 22 204 22 L226 22 Q260 22 260 70 L256 322 Q150 334 44 322Z" fill="none" stroke="url(#rim)" stroke-width="2"/>
+<path d="M76 40 Q70 150 80 310" stroke="url(#sh)" stroke-width="16" fill="none" opacity=".7"/>
+<path d="M210 120 Q220 210 212 312" stroke="#fff" stroke-opacity=".12" stroke-width="10" fill="none"/>
+<path d="M60 140 Q150 160 240 138 M58 220 Q150 244 244 220" stroke="#1d0f4d" stroke-opacity=".35" stroke-width="2" fill="none"/>
+<g transform="translate(150 200)"><circle r="34" fill="#fff" fill-opacity=".14"/><path d="M-16 -16h16c5 0 8 3 8 7 0 3-1 5-3 6h-21z" fill="#fff"/><path d="M16 16H0c-5 0-8-3-8-7 0-3 1-5 3-6h21z" fill="#ffc2e4"/></g>
+</svg>

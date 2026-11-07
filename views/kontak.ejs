@@ -1,0 +1,116 @@
+<%- include('partials/head') %>
+
+<section class="page-hero">
+  <div class="container">
+    <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Kontak</li></ol>
+    <h1 class="display">Hubungi<br>Kami</h1>
+    <p class="lead">Konsultasi, minta penawaran, atau kunjungi lokasi kami. Kami siap membantu kebutuhan plastik kemasan Anda.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:48px">
+  <div class="container contact-grid">
+    <div style="display:grid; gap:24px; align-content:start">
+      <div class="contact-cards">
+        <a class="card card-hover contact-card wa wide reveal" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">
+          <div class="feature-icon"><%- include('partials/icon', { name: 'whatsapp', s: 24 }) %></div>
+          <span>WhatsApp (respon tercepat)</span>
+          <strong><%= site.whatsappDisplay %></strong>
+        </a>
+        <a class="card card-hover contact-card reveal" href="tel:<%= site.phone.replace(/\s/g, '') %>">
+          <div class="feature-icon"><%- include('partials/icon', { name: 'phone', s: 22 }) %></div>
+          <span>Telepon</span>
+          <strong><%= site.phone %></strong>
+        </a>
+        <a class="card card-hover contact-card reveal" href="mailto:<%= site.email %>">
+          <div class="feature-icon"><%- include('partials/icon', { name: 'mail', s: 22 }) %></div>
+          <span>Email</span>
+          <strong><%= site.email %></strong>
+        </a>
+        <div class="card contact-card wide reveal">
+          <div class="feature-icon"><%- include('partials/icon', { name: 'pin', s: 22 }) %></div>
+          <span>Alamat</span>
+          <strong><%= site.fullAddress %></strong>
+        </div>
+      </div>
+
+      <div class="card reveal" style="padding:28px">
+        <h2 style="font-size:20px; margin-bottom:18px">Media Sosial</h2>
+        <ul class="social-list">
+          <% site.socials.forEach(function (s) { %>
+          <li>
+            <a href="<%= s.url %>" target="_blank" rel="noopener">
+              <span class="si"><%- include('partials/icon', { name: s.icon, s: 20 }) %></span>
+              <span><span class="s-name"><%= s.name %></span><br><span class="s-handle"><%= s.handle %></span></span>
+              <%- include('partials/icon', { name: 'arrow', s: 18 }) %>
+            </a>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <form class="card wa-form reveal" data-wa-form data-number="<%= site.whatsapp %>" novalidate>
+      <h2>Minta Penawaran</h2>
+      <p>Isi formulir singkat ini, lalu pesan Anda akan otomatis tersusun di WhatsApp.</p>
+      <div class="field">
+        <label for="nama">Nama <span aria-hidden="true" style="color:var(--pink)">*</span></label>
+        <input id="nama" name="nama" type="text" autocomplete="name" required placeholder="Nama Anda">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="usaha">Nama usaha</label>
+          <input id="usaha" name="usaha" type="text" autocomplete="organization" placeholder="Opsional">
+        </div>
+        <div class="field">
+          <label for="kota">Kota</label>
+          <select id="kota" name="kota">
+            <option value="">Pilih kota</option>
+            <% site.areas.forEach(function (a) { %><option><%= a %></option><% }) %>
+            <option>Lainnya</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="bahan">Bahan plastik</label>
+          <select id="bahan" name="bahan">
+            <option>Plastik HD</option>
+            <option>Plastik PP</option>
+            <option>Belum tahu, butuh rekomendasi</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="jumlah">Perkiraan jumlah</label>
+          <input id="jumlah" name="jumlah" type="text" placeholder="mis. 10.000 lembar">
+        </div>
+      </div>
+      <div class="field">
+        <label for="pesan">Kebutuhan Anda</label>
+        <textarea id="pesan" name="pesan" placeholder="Ukuran, warna, sablon logo, atau pertanyaan lain"></textarea>
+      </div>
+      <p class="field-error" data-error role="alert"></p>
+      <button class="btn btn-violet btn-lg" type="submit"><%- include('partials/icon', { name: 'whatsapp', s: 20 }) %> Kirim via WhatsApp</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="map-wrap reveal">
+      <iframe title="Peta lokasi <%= site.name %>" src="https://www.google.com/maps?q=<%= encodeURIComponent(site.mapsQuery) %>&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="map-overlay">
+        <strong><%= site.name %></strong>
+        <p><%= site.fullAddress %></p>
+        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=<%= encodeURIComponent(site.mapsQuery) %>" target="_blank" rel="noopener">Buka di Google Maps <%- include('partials/icon', { name: 'arrow', s: 16 }) %></a>
+      </div>
+    </div>
+
+    <div class="card reveal" style="padding:28px; margin-top:24px">
+      <h2 style="font-size:20px; margin-bottom:16px">Jam Operasional</h2>
+      <ul class="footer-hours" style="max-width:420px">
+        <% site.hours.forEach(function (h) { %><li><span><%= h.days %></span><span><%= h.time %></span></li><% }) %>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

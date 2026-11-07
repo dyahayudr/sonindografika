@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" role="img" aria-label="Plastik HD roll">
+<defs>
+<linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9a8ff"/><stop offset=".5" stop-color="#6d5bff"/><stop offset="1" stop-color="#2f1d7a"/></linearGradient>
+<linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b7bff" stop-opacity=".85"/><stop offset="1" stop-color="#8b7bff" stop-opacity=".25"/></linearGradient>
+<radialGradient id="e" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1a0f33"/><stop offset=".35" stop-color="#1a0f33"/><stop offset=".4" stop-color="#d9d0ff"/><stop offset="1" stop-color="#7c64ff"/></radialGradient>
+</defs>
+<path d="M70 150 L230 150 L246 316 Q150 330 54 316Z" fill="url(#s)"/>
+<path d="M54 316 Q150 330 246 316" stroke="#fff" stroke-opacity=".5" stroke-width="2" fill="none" stroke-dasharray="5 5"/>
+<path d="M90 170 Q84 240 80 300" stroke="#fff" stroke-opacity=".3" stroke-width="10" fill="none"/>
+<rect x="60" y="70" width="180" height="100" rx="12" fill="url(#r)"/>
+<ellipse cx="240" cy="120" rx="26" ry="50" fill="#5b47f5"/>
+<ellipse cx="60" cy="120" rx="26" ry="50" fill="url(#e)"/>
+<path d="M80 84 H220" stroke="#fff" stroke-opacity=".45" stroke-width="6" stroke-linecap="round"/>
+<path d="M80 110 H220 M80 130 H220" stroke="#1d0f4d" stroke-opacity=".3" stroke-width="2"/>
+</svg>

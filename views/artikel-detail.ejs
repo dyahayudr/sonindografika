@@ -1,0 +1,71 @@
+<%- include('partials/head') %>
+
+<section class="page-hero" style="padding-bottom:0">
+  <div class="container">
+    <ol class="breadcrumb" aria-label="Breadcrumb">
+      <li><a href="/">Home</a></li><li><a href="/artikel">Artikel</a></li><li aria-current="page"><%= article.category %></li>
+    </ol>
+  </div>
+</section>
+
+<div class="container article-layout">
+  <article>
+    <header class="article-head">
+      <span class="eyebrow"><%= article.category %></span>
+      <h1 style="margin-top:18px"><%= article.title %></h1>
+      <div class="meta">
+        <span><%- include('partials/icon', { name: 'calendar', s: 16 }) %><time datetime="<%= article.date %>"><%= formatDate(article.date) %></time></span>
+        <span><%- include('partials/icon', { name: 'clock', s: 16 }) %><%= article.readMinutes %> menit baca</span>
+        <span>Oleh Tim <%= site.name %></span>
+      </div>
+    </header>
+
+    <div class="tldr">
+      <strong><%- include('partials/icon', { name: 'sparkle', s: 16 }) %> Jawaban singkat</strong>
+      <p><%= article.summary %></p>
+    </div>
+
+    <div class="prose">
+      <%- article.body %>
+    </div>
+
+    <section class="faq prose" aria-labelledby="faq-title">
+      <h2 id="faq-title">Pertanyaan yang sering diajukan</h2>
+      <% article.faq.forEach(function (f, i) { %>
+      <details <% if (i === 0) { %>open<% } %>>
+        <summary><%= f.q %></summary>
+        <p><%= f.a %></p>
+      </details>
+      <% }) %>
+    </section>
+  </article>
+
+  <aside class="aside-sticky" aria-label="Navigasi artikel">
+    <nav class="card toc" aria-label="Daftar isi" data-toc>
+      <h2>Daftar isi</h2>
+      <ol>
+        <% article.toc.forEach(function (t) { %><li><a href="#<%= t.id %>"><%= t.text %></a></li><% }) %>
+        <li><a href="#faq-title">FAQ</a></li>
+      </ol>
+    </nav>
+    <div class="card aside-cta">
+      <h2>Konsultasi kemasan gratis</h2>
+      <p>Tim kami siap bantu pilih bahan, ukuran, dan ketebalan yang tepat.</p>
+      <a class="btn btn-white" href="<%= site.whatsappLink('Halo SONINDOGRAFIKA, saya baru membaca artikel \"' + article.title + '\" dan ingin konsultasi.') %>" target="_blank" rel="noopener"><%- include('partials/icon', { name: 'whatsapp', s: 18 }) %> Chat WhatsApp</a>
+    </div>
+  </aside>
+</div>
+
+<section class="section" aria-labelledby="related-title">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="related-title" class="h-section">Artikel <em>lainnya</em></h2>
+      <a class="btn btn-ghost" href="/artikel">Semua Artikel</a>
+    </div>
+    <div class="article-grid">
+      <% related.forEach(function (a) { %><%- include('partials/article-card', { a: a }) %><% }) %>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

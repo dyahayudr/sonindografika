@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.claude/
+*.log
+
+# Gambar referensi desain (bukan milik kita)
+*.webp
