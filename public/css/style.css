@@ -476,6 +476,10 @@ td:first-child { color: var(--text); }
 
 .wa-float { position: fixed; right: 22px; bottom: 22px; z-index: 90; width: 60px; height: 60px; border-radius: 50%; display: grid; place-items: center; background: #25d366; color: #fff; box-shadow: 0 14px 30px -8px rgba(37, 211, 102, .7); transition: transform .25s var(--ease); }
 .wa-float:hover { transform: scale(1.08); }
+@media (max-width: 900px) {
+  .wa-float { transition: transform .25s var(--ease), opacity .25s var(--ease), visibility .25s; }
+  body.rack-in-view .wa-float { opacity: 0; visibility: hidden; transform: translateY(16px) scale(.85); pointer-events: none; }
+}
 
 /* 404 */
 .notfound { text-align: center; padding: 120px 0 160px; }

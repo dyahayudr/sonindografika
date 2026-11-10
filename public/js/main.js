@@ -36,6 +36,14 @@
     reveals.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  // Floating WhatsApp button: tuck it away while the hero rack is on screen (CSS limits this to stacked layouts)
+  var rack = document.querySelector('[data-rack]');
+  if (rack && document.querySelector('.wa-float') && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      document.body.classList.toggle('rack-in-view', entries[0].isIntersecting);
+    }).observe(rack);
+  }
+
   // Product filter
   var filterBar = document.querySelector('[data-filter]');
   if (filterBar) {
