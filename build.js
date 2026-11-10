@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const BASE = (process.env.BASE_PATH || '').replace(/\/$/, '');
+process.env.STATIC_BUILD = '1'; // cegah server.js membuka port sendiri
 const { app, nav, articles } = require('./server');
 
 const DIST = path.join(__dirname, 'dist');

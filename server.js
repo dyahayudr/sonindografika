@@ -253,7 +253,10 @@ app.use((req, res) => {
 
 module.exports = { app, nav, articles };
 
-if (require.main === module) {
+// Selalu listen, KECUALI saat dipakai build.js (STATIC_BUILD=1).
+// Jangan pakai `require.main === module`: Hostinger (LiteSpeed lsnode/Passenger) memuat file ini
+// lewat pembungkus, sehingga kondisi itu false dan server tidak pernah menyala (503).
+if (!process.env.STATIC_BUILD) {
   app.listen(PORT, () => {
     console.log(`SONINDOGRAFIKA berjalan di http://localhost:${PORT}`);
   });
