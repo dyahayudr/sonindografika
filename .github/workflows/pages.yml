@@ -31,12 +31,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      # base_path = "/nama-repo" (atau kosong jika memakai domain sendiri)
+      # base_path = "/nama-repo" (atau kosong jika memakai domain sendiri).
+      # SITE_URL tetap domain utama agar canonical/sitemap menunjuk ke sonindografika.com (hindari konten duplikat).
       - name: Build static site
         run: npm run build
         env:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
-          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          SITE_URL: https://sonindografika.com
 
       - uses: actions/upload-pages-artifact@v3
         with:

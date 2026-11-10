@@ -7,15 +7,15 @@
 const site = {
   name: 'SONINDOGRAFIKA',
   tagline: 'Produsen Plastik HD & PP untuk Jabodetabek',
-  // Saat build GitHub Pages, SITE_URL diisi otomatis oleh workflow
-  url: (process.env.SITE_URL || 'https://www.sonindografika.co.id').replace(/\/$/, ''), // GANTI: domain asli
+  // Domain utama (dipakai untuk canonical, sitemap, schema). Bisa ditimpa lewat env SITE_URL.
+  url: (process.env.SITE_URL || 'https://sonindografika.com').replace(/\/$/, ''),
   locale: 'id_ID',
 
   // Kontak (GANTI semua dengan data asli)
   whatsapp: '6281200000000', // format internasional tanpa "+" dan tanpa spasi
   whatsappDisplay: '+62 812-0000-0000',
   phone: '+62 21 0000 0000',
-  email: 'info@sonindografika.co.id',
+  email: 'info@sonindografika.com',
   address: {
     street: 'Jl. Contoh Industri No. 1',
     locality: 'Kota Tangerang',
