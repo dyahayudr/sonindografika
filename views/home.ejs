@@ -9,30 +9,11 @@
         <p class="lead"><strong><%= site.name %></strong> memproduksi kantong plastik HD dan PP — polos maupun sablon logo — untuk toko, UMKM, dan industri di Jabodetabek.</p>
         <div class="hero-actions">
           <a class="btn btn-white btn-lg" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">Minta Penawaran</a>
-          <a class="btn btn-ghost btn-lg" href="/produk">Lihat Produk <%- include('partials/icon', { name: 'arrow', s: 18 }) %></a>
+          <a class="btn btn-ghost btn-lg" href="/produk">Lihat Produk</a>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="floor"></div>
-        <img src="/img/hero-packaging.svg" alt="Kantong plastik HD dan plastik PP bening produksi SONINDOGRAFIKA" width="520" height="540" fetchpriority="high">
-        <span class="hotspot h1"><span class="pulse"></span> Bening PP</span>
-        <span class="hotspot h3"><span class="pulse"></span> Kuat HD</span>
-        <span class="hotspot h2"><span class="pulse"></span> Sablon Custom</span>
-      </div>
-
-      <aside class="card stat-card" aria-label="Keunggulan utama">
-        <div class="ring">
-          <svg viewBox="0 0 132 132" aria-hidden="true">
-            <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b7bff"/><stop offset="1" stop-color="#ff5fa8"/></linearGradient></defs>
-            <circle cx="66" cy="66" r="58" fill="none" stroke="url(#rg)" stroke-width="7" stroke-dasharray="2 4.2"/>
-            <circle cx="66" cy="66" r="42" fill="#0a0611" stroke="rgba(255,255,255,.12)"/>
-          </svg>
-          <div class="ring-label"><strong>100%</strong><span>Custom</span></div>
-        </div>
-        <h3><span class="grad-text">Ukuran &amp; Sablon</span><br>Sesuai Brand</h3>
-        <p>Pilih ukuran, ketebalan, warna, dan logo sesuai kebutuhan usaha Anda.</p>
-      </aside>
+      <%- include('partials/hanger-rack') %>
     </div>
 
     <div class="bento">
