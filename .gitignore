@@ -2,6 +2,7 @@ node_modules/
 dist/
 .claude/
 *.log
+brief/
 
 # Gambar referensi desain (bukan milik kita)
 *.webp
