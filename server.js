@@ -16,11 +16,35 @@ app.set('views', path.join(__dirname, 'views'));
 app.disable('x-powered-by');
 
 app.use(compression());
+// Header keamanan. Sumber luar yang diizinkan:
+//  - Google Fonts (fonts.googleapis.com / fonts.gstatic.com)
+//  - Google Maps embed di halaman Kontak (www.google.com / maps.google.com)
+//  - Cloudflare: email-decode (/cdn-cgi, domain sendiri) + Web Analytics beacon (static.cloudflareinsights.com)
+// style 'unsafe-inline' dibutuhkan karena template & SVG memakai atribut style="...".
+// HSTS sengaja diatur di Cloudflare (SSL/TLS → Edge Certificates), bukan di sini.
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' https://static.cloudflareinsights.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com",
+  "img-src 'self' data:",
+  "connect-src 'self' https://cloudflareinsights.com",
+  "frame-src https://www.google.com https://maps.google.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'self'",
+  'upgrade-insecure-requests',
+].join('; ');
+
 app.use((req, res, next) => {
   res.set({
+    'Content-Security-Policy': CSP,
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'X-Frame-Options': 'SAMEORIGIN',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()',
+    'Cross-Origin-Opener-Policy': 'same-origin-allow-popups',
   });
   next();
 });
