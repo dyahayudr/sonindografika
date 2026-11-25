@@ -1,0 +1,19 @@
+/* Sumber CSS Tailwind v4 + daisyUI v5 (tema: dim).
+   Hasil build: public/css/app.css  →  jalankan `npm run css` setelah mengubah file ini.
+
+   - Prefix "d-": class daisyUI (btn, card, hero, steps, …) tidak bentrok dengan class lama situs.
+   - source(none) + @source inline(...): Tailwind TIDAK memindai views, jadi tidak membuat utility
+     yang namanya bentrok dengan class situs (.container, .prose, .hidden, …).
+     Mau memakai komponen daisyUI baru? Tambahkan class-nya ke daftar inline di bawah, lalu `npm run css`. */
+@import "tailwindcss" source(none);
+
+@source inline("d-btn d-btn-{primary,secondary,accent,neutral,outline,ghost,lg,sm,block}");
+@source inline("d-{input,select,textarea} d-{input,select,textarea}-{primary,bordered}");
+@source inline("d-badge d-badge-{primary,secondary,accent,outline}");
+@source inline("d-table d-collapse d-collapse-{title,content,plus,arrow}");
+
+@plugin "daisyui" {
+  themes: dim --default;
+  prefix: "d-";
+  logs: false;
+}

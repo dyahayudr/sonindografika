@@ -55,16 +55,16 @@
       <p>Isi formulir singkat ini, lalu pesan Anda akan otomatis tersusun di WhatsApp.</p>
       <div class="field">
         <label for="nama">Nama <span aria-hidden="true" style="color:var(--pink)">*</span></label>
-        <input id="nama" name="nama" type="text" autocomplete="name" required placeholder="Nama Anda">
+        <input class="d-input" id="nama" name="nama" type="text" autocomplete="name" required placeholder="Nama Anda">
       </div>
       <div class="field-row">
         <div class="field">
           <label for="usaha">Nama usaha</label>
-          <input id="usaha" name="usaha" type="text" autocomplete="organization" placeholder="Opsional">
+          <input class="d-input" id="usaha" name="usaha" type="text" autocomplete="organization" placeholder="Opsional">
         </div>
         <div class="field">
           <label for="kota">Kota</label>
-          <select id="kota" name="kota">
+          <select class="d-select" id="kota" name="kota">
             <option value="">Pilih kota</option>
             <% site.areas.forEach(function (a) { %><option><%= a %></option><% }) %>
             <option>Lainnya</option>
@@ -74,7 +74,7 @@
       <div class="field-row">
         <div class="field">
           <label for="bahan">Bahan plastik</label>
-          <select id="bahan" name="bahan">
+          <select class="d-select" id="bahan" name="bahan">
             <option>Plastik HD</option>
             <option>Plastik PP</option>
             <option>Belum tahu, butuh rekomendasi</option>
@@ -82,15 +82,15 @@
         </div>
         <div class="field">
           <label for="jumlah">Perkiraan jumlah</label>
-          <input id="jumlah" name="jumlah" type="text" placeholder="mis. 10.000 lembar">
+          <input class="d-input" id="jumlah" name="jumlah" type="text" placeholder="mis. 10.000 lembar">
         </div>
       </div>
       <div class="field">
         <label for="pesan">Kebutuhan Anda</label>
-        <textarea id="pesan" name="pesan" placeholder="Ukuran, warna, sablon logo, atau pertanyaan lain"></textarea>
+        <textarea class="d-textarea" id="pesan" name="pesan" placeholder="Ukuran, warna, sablon logo, atau pertanyaan lain"></textarea>
       </div>
       <p class="field-error" data-error role="alert"></p>
-      <button class="btn btn-violet btn-lg" type="submit"><%- include('partials/icon', { name: 'whatsapp', s: 20 }) %> Kirim via WhatsApp</button>
+      <button class="d-btn d-btn-primary d-btn-lg" type="submit"><%- include('partials/icon', { name: 'whatsapp', s: 20 }) %> Kirim via WhatsApp</button>
     </form>
   </div>
 

@@ -8,8 +8,8 @@
         <h1 id="hero-title" class="display hero-slogan">PLASTIK LAUNDRY MURAH,<br>PELUANG UNTUNG MELIMPAH!</h1>
         <p class="lead"><strong><%= site.name %></strong> memproduksi kantong plastik HD dan PP, baik polos maupun sablon logo, untuk toko, UMKM, dan industri di Jabodetabek.</p>
         <div class="hero-actions">
-          <a class="btn btn-white btn-lg" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">Minta Penawaran</a>
-          <a class="btn btn-ghost btn-lg" href="/produk">Lihat Produk</a>
+          <a class="d-btn d-btn-primary d-btn-lg" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">Minta Penawaran</a>
+          <a class="d-btn d-btn-outline d-btn-lg" href="/produk">Lihat Produk</a>
         </div>
       </div>
 
@@ -82,7 +82,7 @@
         <h2 id="produk-title" class="h-section" style="margin-top:18px">Pilihan plastik <em>HD &amp; PP</em></h2>
         <p class="lead">Dari kantong kresek belanja sampai plastik bening untuk kemasan makanan.</p>
       </div>
-      <a class="btn btn-ghost" href="/produk">Semua Produk <%- include('partials/icon', { name: 'arrow', s: 18 }) %></a>
+      <a class="d-btn d-btn-outline" href="/produk">Semua Produk <%- include('partials/icon', { name: 'arrow', s: 18 }) %></a>
     </div>
     <div class="product-grid">
       <% products.forEach(function (p) { %><%- include('partials/product-card', { p: p }) %><% }) %>
@@ -143,8 +143,8 @@
         <p>Dapatkan penawaran harga dan rekomendasi bahan secara gratis. Kami biasanya membalas dalam hitungan jam.</p>
       </div>
       <div class="actions">
-        <a class="btn btn-white btn-lg" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener"><%- include('partials/icon', { name: 'whatsapp', s: 20 }) %> Chat WhatsApp</a>
-        <a class="btn btn-ghost btn-lg" href="/kontak">Kontak Lainnya</a>
+        <a class="d-btn d-btn-primary d-btn-lg" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener"><%- include('partials/icon', { name: 'whatsapp', s: 20 }) %> Chat WhatsApp</a>
+        <a class="d-btn d-btn-outline d-btn-lg" href="/kontak">Kontak Lainnya</a>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@
         <span class="eyebrow">Artikel</span>
         <h2 id="artikel-title" class="h-section" style="margin-top:18px">Panduan <em>plastik kemasan</em></h2>
       </div>
-      <a class="btn btn-ghost" href="/artikel">Semua Artikel <%- include('partials/icon', { name: 'arrow', s: 18 }) %></a>
+      <a class="d-btn d-btn-outline" href="/artikel">Semua Artikel <%- include('partials/icon', { name: 'arrow', s: 18 }) %></a>
     </div>
     <div class="article-grid">
       <% articles.forEach(function (a) { %><%- include('partials/article-card', { a: a }) %><% }) %>

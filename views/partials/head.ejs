@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id" class="no-js">
+<html lang="id" class="no-js" data-theme="dim">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
   <meta name="description" content="<%= description %>">
   <% if (typeof noindex !== 'undefined' && noindex) { %><meta name="robots" content="noindex"><% } else { %><meta name="robots" content="index, follow, max-image-preview:large"><% } %>
   <link rel="canonical" href="<%= canonical %>">
-  <meta name="theme-color" content="#0b0612">
+  <meta name="theme-color" content="#2A303C">
   <meta name="geo.region" content="ID-JK">
   <meta name="geo.placename" content="Jabodetabek">
 
@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css?v=<%= assetVersion %>">
   <link rel="stylesheet" href="/css/style.css?v=<%= assetVersion %>">
 
   <% (schemas || []).forEach(function (schema) { %>

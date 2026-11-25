@@ -12,12 +12,12 @@
           <li><a href="<%= item.href %>" class="<%= active ? 'is-active' : '' %>" <% if (active) { %>aria-current="page"<% } %>><%= item.label %></a></li>
         <% }) %>
       </ul>
-      <a class="btn btn-violet nav-cta-mobile" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">
+      <a class="d-btn d-btn-primary nav-cta-mobile" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">
         <%- include('icon', { name: 'whatsapp', s: 18 }) %> Minta Penawaran
       </a>
     </nav>
 
-    <a class="btn btn-violet header-cta" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">Pesan Sekarang</a>
+    <a class="d-btn d-btn-primary header-cta" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener">Pesan Sekarang</a>
 
     <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Buka menu" data-nav-toggle>
       <span class="nav-toggle-open"><%- include('icon', { name: 'menu', s: 24 }) %></span>

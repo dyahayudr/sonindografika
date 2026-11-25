@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "build": "node build.js"
+    "build": "node build.js",
+    "css": "tailwindcss -i src/tailwind.css -o public/css/app.css --minify"
   },
   "engines": {
     "node": ">=18"
@@ -16,5 +17,10 @@
     "compression": "^1.8.2",
     "ejs": "^3.1.10",
     "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.5",
+    "daisyui": "5.8.2",
+    "tailwindcss": "4.3.5"
   }
 }
