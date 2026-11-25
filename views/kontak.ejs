@@ -96,11 +96,11 @@
 
   <div class="container">
     <div class="map-wrap reveal">
-      <iframe title="Peta lokasi <%= site.name %>" src="https://www.google.com/maps?q=<%= encodeURIComponent(site.mapsQuery) %>&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <iframe title="Peta lokasi <%= site.name %>" src="https://www.google.com/maps?q=<%= encodeURIComponent(site.mapsQuery) %>&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       <div class="map-overlay">
         <strong><%= site.name %></strong>
         <p><%= site.fullAddress %></p>
-        <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=<%= encodeURIComponent(site.mapsQuery) %>" target="_blank" rel="noopener">Buka di Google Maps <%- include('partials/icon', { name: 'arrow', s: 16 }) %></a>
+        <a class="link-arrow" href="<%= site.mapsUrl %>" target="_blank" rel="noopener">Buka di Google Maps <%- include('partials/icon', { name: 'arrow', s: 16 }) %></a>
       </div>
     </div>
 

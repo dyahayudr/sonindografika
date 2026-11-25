@@ -104,6 +104,8 @@ const orgSchema = {
     postalCode: site.address.postalCode,
     addressCountry: site.address.country,
   },
+  geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
+  hasMap: site.mapsUrl,
   areaServed: site.areas.map((a) => ({ '@type': 'City', name: a })),
   sameAs: site.socials.map((s) => s.url),
   makesOffer: Object.values(materials).map((m) => ({

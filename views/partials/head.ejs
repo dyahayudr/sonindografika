@@ -8,8 +8,10 @@
   <% if (typeof noindex !== 'undefined' && noindex) { %><meta name="robots" content="noindex"><% } else { %><meta name="robots" content="index, follow, max-image-preview:large"><% } %>
   <link rel="canonical" href="<%= canonical %>">
   <meta name="theme-color" content="#0b0612">
-  <meta name="geo.region" content="ID-JK">
-  <meta name="geo.placename" content="Jabodetabek">
+  <meta name="geo.region" content="ID-JT">
+  <meta name="geo.placename" content="Kartasura, Sukoharjo">
+  <meta name="geo.position" content="<%= site.geo.lat %>;<%= site.geo.lng %>">
+  <meta name="ICBM" content="<%= site.geo.lat %>, <%= site.geo.lng %>">
 
   <meta property="og:type" content="<%= typeof ogType !== 'undefined' ? ogType : 'website' %>">
   <meta property="og:site_name" content="<%= site.name %>">

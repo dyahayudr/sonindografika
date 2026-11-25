@@ -15,16 +15,19 @@ const site = {
   whatsapp: '6285111393611', // format internasional tanpa "+" dan tanpa spasi → wa.me/6285111393611
   whatsappDisplay: '+62 851 1139 3611',
   phone: '+62 851 1139 3611',
-  email: 'info@sonindografika.com',
+  email: 'admin@limaplastik.com',
   address: {
-    street: 'Jl. Contoh Industri No. 1',
-    locality: 'Kota Tangerang',
-    region: 'Banten',
-    postalCode: '15000',
+    street: 'Jl. Notosuman, RT.002/RW.005, Dusun II, Singopuran, Kec. Kartasura',
+    locality: 'Kabupaten Sukoharjo',
+    region: 'Jawa Tengah',
+    postalCode: '57164',
     country: 'ID',
   },
-  // Teks yang dipakai untuk peta Google Maps (bisa alamat lengkap / nama tempat)
-  mapsQuery: 'Tangerang, Banten',
+  // Titik peta (koordinat tempat "LIMA PLASTIK" di Google Maps) untuk embed di halaman Kontak
+  mapsQuery: '-7.5493543,110.746806',
+  geo: { lat: -7.5493543, lng: 110.746806 },
+  // Link "Buka di Google Maps"
+  mapsUrl: 'https://maps.app.goo.gl/joNv26CNAwLaZeGb9',
   hours: [
     { days: 'Senin – Jumat', time: '08.00 – 17.00' },
     { days: 'Sabtu', time: '08.00 – 14.00' },
