@@ -89,7 +89,7 @@
       }
       error.textContent = '';
       var lines = [
-        'Halo SONINDOGRAFIKA, saya ingin minta penawaran.',
+        'Halo LIMA PLASTIK, saya ingin minta penawaran.',
         '',
         'Nama: ' + nama,
         data.get('usaha') ? 'Usaha: ' + data.get('usaha') : '',

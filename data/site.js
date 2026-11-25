@@ -1,11 +1,11 @@
 // =====================================================================
 //  KONFIGURASI PERUSAHAAN
 //  Semua data kontak & angka di bawah ini adalah CONTOH / PLACEHOLDER.
-//  Ganti dengan data asli SONINDOGRAFIKA sebelum website dipublikasikan.
+//  Ganti dengan data asli LIMA PLASTIK sebelum website dipublikasikan.
 // =====================================================================
 
 const site = {
-  name: 'SONINDOGRAFIKA',
+  name: 'LIMA PLASTIK',
   tagline: 'Produsen Plastik HD & PP untuk Jabodetabek',
   // Domain utama (dipakai untuk canonical, sitemap, schema). Bisa ditimpa lewat env SITE_URL.
   url: (process.env.SITE_URL || 'https://sonindografika.com').replace(/\/$/, ''),
@@ -33,10 +33,10 @@ const site = {
 
   socials: [
     { name: 'Instagram', handle: '@sonindografika', url: 'https://instagram.com/sonindografika', icon: 'instagram' },
-    { name: 'Facebook', handle: 'SONINDOGRAFIKA', url: 'https://facebook.com/sonindografika', icon: 'facebook' },
+    { name: 'Facebook', handle: 'LIMA PLASTIK', url: 'https://facebook.com/sonindografika', icon: 'facebook' },
     { name: 'TikTok', handle: '@sonindografika', url: 'https://tiktok.com/@sonindografika', icon: 'tiktok' },
-    { name: 'YouTube', handle: 'SONINDOGRAFIKA', url: 'https://youtube.com/@sonindografika', icon: 'youtube' },
-    { name: 'Tokopedia', handle: 'SONINDOGRAFIKA', url: 'https://tokopedia.com/sonindografika', icon: 'shop' },
+    { name: 'YouTube', handle: 'LIMA PLASTIK', url: 'https://youtube.com/@sonindografika', icon: 'youtube' },
+    { name: 'Tokopedia', handle: 'LIMA PLASTIK', url: 'https://tokopedia.com/sonindografika', icon: 'shop' },
   ],
 
   // Angka-angka di beranda (GANTI sesuai fakta perusahaan)
@@ -49,7 +49,7 @@ const site = {
   areas: ['Jakarta', 'Bogor', 'Depok', 'Tangerang', 'Bekasi'],
 };
 
-site.whatsappLink = (text = 'Halo SONINDOGRAFIKA, saya ingin minta penawaran plastik.') =>
+site.whatsappLink = (text = 'Halo LIMA PLASTIK, saya ingin minta penawaran plastik.') =>
   `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
 
 site.fullAddress = `${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}`;

@@ -50,7 +50,7 @@ const articles = [
 </ul>
 
 <h2>Kesimpulan</h2>
-<p>Tidak ada bahan yang paling baik untuk semua kebutuhan. Pilih <strong>HD</strong> untuk kekuatan dan efisiensi biaya, pilih <strong>PP</strong> untuk tampilan bening dan kemasan makanan. Jika masih ragu, tim SONINDOGRAFIKA siap membantu merekomendasikan bahan, ukuran, dan ketebalan yang paling sesuai.</p>
+<p>Tidak ada bahan yang paling baik untuk semua kebutuhan. Pilih <strong>HD</strong> untuk kekuatan dan efisiensi biaya, pilih <strong>PP</strong> untuk tampilan bening dan kemasan makanan. Jika masih ragu, tim LIMA PLASTIK siap membantu merekomendasikan bahan, ukuran, dan ketebalan yang paling sesuai.</p>
 `,
     faq: [
       { q: 'Apakah plastik HD aman untuk makanan?', a: 'Plastik HD dengan bahan murni (virgin) umumnya aman untuk makanan kering seperti beras, gula, dan tepung. Untuk makanan panas atau berminyak, gunakan kemasan yang memang dinyatakan food grade.' },
@@ -105,7 +105,7 @@ const articles = [
 `,
     faq: [
       { q: 'Berapa ketebalan plastik yang ideal untuk kantong belanja?', a: 'Untuk belanja harian, ketebalan sedang sudah cukup. Jika barang yang dibawa berat, pilih plastik HD yang lebih tebal agar tidak sobek.' },
-      { q: 'Apakah bisa memesan ukuran plastik custom?', a: 'Bisa. SONINDOGRAFIKA melayani ukuran dan ketebalan custom sesuai kebutuhan produk Anda.' },
+      { q: 'Apakah bisa memesan ukuran plastik custom?', a: 'Bisa. LIMA PLASTIK melayani ukuran dan ketebalan custom sesuai kebutuhan produk Anda.' },
       { q: 'Apakah bisa meminta sampel terlebih dahulu?', a: 'Bisa. Kami menyarankan menguji sampel sebelum produksi massal agar ukuran dan ketebalan benar-benar sesuai.' },
     ],
   },
@@ -147,7 +147,7 @@ const articles = [
 </ul>
 `,
     faq: [
-      { q: 'Apakah SONINDOGRAFIKA melayani pengiriman ke seluruh Jabodetabek?', a: 'Ya, kami melayani pengiriman ke Jakarta, Bogor, Depok, Tangerang, dan Bekasi.' },
+      { q: 'Apakah LIMA PLASTIK melayani pengiriman ke seluruh Jabodetabek?', a: 'Ya, kami melayani pengiriman ke Jakarta, Bogor, Depok, Tangerang, dan Bekasi.' },
       { q: 'Format file logo apa yang dibutuhkan untuk sablon?', a: 'Format vektor seperti AI, CDR, PDF, atau SVG paling ideal. File PNG resolusi tinggi juga bisa kami bantu olah.' },
       { q: 'Berapa minimal order plastik sablon?', a: 'Minimal order tergantung bahan, ukuran, dan jumlah warna sablon. Hubungi kami melalui WhatsApp untuk mendapatkan informasi minimal order terbaru.' },
     ],
@@ -192,7 +192,7 @@ const articles = [
     faq: [
       { q: 'Apakah plastik PP aman untuk makanan panas?', a: 'Plastik PP lebih tahan panas dibanding plastik PE, namun tetap gunakan sesuai peruntukan dan hindari memanaskan makanan langsung di dalam plastik kecuali kemasan dirancang untuk itu.' },
       { q: 'Apa perbedaan plastik PP dan OPP?', a: 'OPP (Oriented Polypropylene) adalah PP yang diregangkan sehingga lebih jernih dan kaku. Keduanya sama-sama turunan polypropylene dengan karakter tampilan bening.' },
-      { q: 'Apakah SONINDOGRAFIKA menyediakan plastik PP food grade?', a: 'Ya, kami menyediakan plastik PP untuk kemasan makanan. Hubungi kami untuk konsultasi spesifikasi yang sesuai produk Anda.' },
+      { q: 'Apakah LIMA PLASTIK menyediakan plastik PP food grade?', a: 'Ya, kami menyediakan plastik PP untuk kemasan makanan. Hubungi kami untuk konsultasi spesifikasi yang sesuai produk Anda.' },
     ],
   },
   {

@@ -101,9 +101,9 @@ const orgSchema = {
 
 app.get('/', (req, res) => {
   res.render('home', {
-    title: 'SONINDOGRAFIKA – Produsen Plastik HD & PP Jabodetabek',
+    title: 'LIMA PLASTIK – Produsen Plastik HD & PP Jabodetabek',
     description:
-      'SONINDOGRAFIKA memproduksi kantong plastik HD dan PP, polos maupun sablon logo custom. Melayani Jakarta, Bogor, Depok, Tangerang, dan Bekasi.',
+      'LIMA PLASTIK memproduksi kantong plastik HD dan PP, polos maupun sablon logo custom. Melayani Jakarta, Bogor, Depok, Tangerang, dan Bekasi.',
     products: products.slice(0, 4),
     materials,
     articles: articles.slice(0, 3),
@@ -113,16 +113,16 @@ app.get('/', (req, res) => {
 
 app.get('/tentang', (req, res) => {
   res.render('tentang', {
-    title: 'Tentang Kami – SONINDOGRAFIKA',
+    title: 'Tentang Kami – LIMA PLASTIK',
     description:
-      'Kenali SONINDOGRAFIKA, produsen plastik HD dan PP untuk kebutuhan kemasan usaha di Jabodetabek. Kualitas terjaga, harga pabrik, dan pengiriman cepat.',
+      'Kenali LIMA PLASTIK, produsen plastik HD dan PP untuk kebutuhan kemasan usaha di Jabodetabek. Kualitas terjaga, harga pabrik, dan pengiriman cepat.',
     schemas: [orgSchema],
   });
 });
 
 app.get('/produk', (req, res) => {
   res.render('produk', {
-    title: 'Produk Plastik HD & PP – SONINDOGRAFIKA',
+    title: 'Produk Plastik HD & PP – LIMA PLASTIK',
     description:
       'Katalog kantong plastik HD (kresek, plong, roll) dan plastik PP (bening, seal) serta sablon custom. Lihat kelebihan dan kegunaan tiap bahan.',
     products,
@@ -151,7 +151,7 @@ app.get('/produk', (req, res) => {
 
 app.get('/artikel', (req, res) => {
   res.render('artikel', {
-    title: 'Artikel & Panduan Plastik Kemasan – SONINDOGRAFIKA',
+    title: 'Artikel & Panduan Plastik Kemasan – LIMA PLASTIK',
     description:
       'Panduan seputar plastik HD dan PP, ukuran & ketebalan, plastik sablon, hingga tips hemat packaging untuk UMKM di Jabodetabek.',
     articles,
@@ -159,7 +159,7 @@ app.get('/artikel', (req, res) => {
       {
         '@context': 'https://schema.org',
         '@type': 'Blog',
-        name: 'Artikel SONINDOGRAFIKA',
+        name: 'Artikel LIMA PLASTIK',
         url: site.url + '/artikel',
         blogPost: articles.map((a) => ({
           '@type': 'BlogPosting',
@@ -178,7 +178,7 @@ app.get('/artikel/:slug', (req, res, next) => {
   const related = articles.filter((a) => a.slug !== article.slug).slice(0, 3);
   const url = site.url + '/artikel/' + article.slug;
   res.render('artikel-detail', {
-    title: article.title + ' – SONINDOGRAFIKA',
+    title: article.title + ' – LIMA PLASTIK',
     description: article.description,
     ogType: 'article',
     article,
@@ -222,9 +222,9 @@ app.get('/artikel/:slug', (req, res, next) => {
 
 app.get('/kontak', (req, res) => {
   res.render('kontak', {
-    title: 'Kontak – SONINDOGRAFIKA',
+    title: 'Kontak – LIMA PLASTIK',
     description:
-      'Hubungi SONINDOGRAFIKA via WhatsApp, telepon, email, atau kunjungi alamat kami. Melayani pesanan plastik HD & PP se-Jabodetabek.',
+      'Hubungi LIMA PLASTIK via WhatsApp, telepon, email, atau kunjungi alamat kami. Melayani pesanan plastik HD & PP se-Jabodetabek.',
     schemas: [orgSchema],
   });
 });
@@ -272,7 +272,7 @@ app.get('/llms.txt', (req, res) => {
 
 // 404
 app.use((req, res) => {
-  res.status(404).render('404', { title: 'Halaman tidak ditemukan – SONINDOGRAFIKA', description: '', schemas: [], noindex: true });
+  res.status(404).render('404', { title: 'Halaman tidak ditemukan – LIMA PLASTIK', description: '', schemas: [], noindex: true });
 });
 
 module.exports = { app, nav, articles };
@@ -282,6 +282,6 @@ module.exports = { app, nav, articles };
 // lewat pembungkus, sehingga kondisi itu false dan server tidak pernah menyala (503).
 if (!process.env.STATIC_BUILD) {
   app.listen(PORT, () => {
-    console.log(`SONINDOGRAFIKA berjalan di http://localhost:${PORT}`);
+    console.log(`LIMA PLASTIK berjalan di http://localhost:${PORT}`);
   });
 }

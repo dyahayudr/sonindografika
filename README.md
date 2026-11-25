@@ -1,4 +1,4 @@
-# SONINDOGRAFIKA – Landing Page
+# LIMA PLASTIK – Landing Page
 
 Website company profile produsen plastik HD & PP (fokus Jabodetabek). Node.js + Express + EJS.
 

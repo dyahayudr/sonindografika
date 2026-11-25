@@ -1,7 +1,7 @@
 {
   "name": "sonindografika-web",
   "version": "1.0.0",
-  "description": "Landing page SONINDOGRAFIKA - produsen plastik HD dan PP untuk area Jabodetabek",
+  "description": "Landing page LIMA PLASTIK - produsen plastik HD dan PP untuk area Jabodetabek",
   "main": "server.js",
   "private": true,
   "scripts": {

@@ -113,8 +113,8 @@
           '<path d="M-6 -36 Q-6 -40 -2 -40 Q2 -40 2 -37" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>' +
           '<use href="#logoInk" x="-11" y="-29" width="22" height="22"/>' +
           '<g font-family="Plus Jakarta Sans, sans-serif" font-weight="800" text-anchor="middle">' +
-            '<text y="11" font-size="10.5" textLength="48" lengthAdjust="spacingAndGlyphs">SONINDO</text>' +
-            '<text y="22" font-size="10.5" textLength="48" lengthAdjust="spacingAndGlyphs">GRAFIKA</text>' +
+            '<text y="11" font-size="10.5" textLength="30" lengthAdjust="spacingAndGlyphs">LIMA</text>' +
+            '<text y="22" font-size="10.5" textLength="46" lengthAdjust="spacingAndGlyphs">PLASTIK</text>' +
             (phone ? '<circle cx="-20" cy="28.6" r="2.4"/><text x="3" y="30.6" font-size="5.4" font-weight="700" textLength="40" lengthAdjust="spacingAndGlyphs"></text>' : '') +
             '<text y="37" font-size="3.6" font-weight="600" textLength="46" lengthAdjust="spacingAndGlyphs">PLASTIK HD &amp; PP · JABODETABEK</text>' +
           '</g>' +
