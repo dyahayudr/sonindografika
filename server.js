@@ -70,6 +70,18 @@ app.use((req, res, next) => {
   res.locals.year = new Date().getFullYear();
   res.locals.assetVersion = ASSET_VERSION;
   res.locals.ogImage = site.url + '/img/og-image.png';
+
+  // Cache-busting gambar: tambahkan ?v=<versi> ke setiap src/href="/img/..." di HTML yang dirender,
+  // supaya gambar yang diganti langsung tampil (tidak tertahan cache Cloudflare / browser).
+  const render = res.render.bind(res);
+  res.render = (view, options, callback) => {
+    if (typeof options === 'function') { callback = options; options = {}; }
+    render(view, options, (err, html) => {
+      if (err) return callback ? callback(err) : next(err);
+      html = html.replace(/((?:src|href)="\/img\/[^"?#]+)"/g, `$1?v=${ASSET_VERSION}"`);
+      return callback ? callback(null, html) : res.send(html);
+    });
+  };
   next();
 });
 
