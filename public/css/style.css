@@ -428,7 +428,8 @@ td:first-child { color: var(--text); }
 .social-list .s-name { font-weight: 500; }
 .social-list .s-handle { font-size: 14px; color: var(--muted-2); }
 .social-list a > :not(.si):not(.icon) { min-width: 0; overflow-wrap: anywhere; }
-.social-list .icon:last-child { margin-left: auto; color: var(--muted-2); }
+/* Hanya panah "→" di ujung kanan baris; ikon sosial media di dalam kotak .si tetap di tengah */
+.social-list a > .icon:last-child { margin-left: auto; color: var(--muted-2); }
 
 .wa-form { padding: clamp(26px, 4vw, 40px); }
 .wa-form h2 { font-size: 26px; font-weight: 400; margin-bottom: 6px; }
