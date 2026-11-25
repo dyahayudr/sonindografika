@@ -6,7 +6,7 @@
 
 const site = {
   name: 'LIMA PLASTIK',
-  tagline: 'Produsen Plastik HD & PP untuk Jabodetabek',
+  tagline: 'PLASTIK LAUNDRY MURAH, PELUANG UNTUNG MELIMPAH!',
   // Domain utama (dipakai untuk canonical, sitemap, schema). Bisa ditimpa lewat env SITE_URL.
   url: (process.env.SITE_URL || 'https://sonindografika.com').replace(/\/$/, ''),
   locale: 'id_ID',

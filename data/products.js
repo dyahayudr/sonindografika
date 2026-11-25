@@ -30,7 +30,7 @@ const materials = {
     summary:
       'Plastik PP bening, jernih, dan mengkilap sehingga isi kemasan terlihat jelas dan tampak premium. Lebih tahan panas dibanding plastik PE dan umum dipakai sebagai kemasan makanan.',
     advantages: [
-      'Sangat bening dan mengkilap — produk terlihat menarik',
+      'Sangat bening dan mengkilap, produk terlihat menarik',
       'Lebih tahan panas dibanding plastik PE',
       'Tersedia bahan food grade untuk kemasan makanan',
       'Kaku dan rapi, kemasan tidak mudah kusut',

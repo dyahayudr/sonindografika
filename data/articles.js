@@ -79,7 +79,7 @@ const articles = [
 <ol>
   <li><strong>Ukur produk terbesar</strong> yang akan dikemas: panjang, lebar, dan tinggi.</li>
   <li><strong>Tambahkan ruang</strong> 3–5 cm di setiap sisi agar produk mudah dimasukkan.</li>
-  <li><strong>Pertimbangkan pegangan</strong> — kantong kresek dan plong butuh tinggi ekstra untuk area pegangan.</li>
+  <li><strong>Pertimbangkan pegangan</strong>: kantong kresek dan plong butuh tinggi ekstra untuk area pegangan.</li>
   <li><strong>Minta sampel</strong> dan uji langsung dengan produk Anda.</li>
 </ol>
 
@@ -113,7 +113,7 @@ const articles = [
     slug: 'panduan-pesan-plastik-sablon-jabodetabek',
     title: 'Panduan Pesan Plastik Sablon Custom Logo di Jabodetabek',
     description:
-      'Langkah lengkap memesan kantong plastik sablon logo di Jakarta, Bogor, Depok, Tangerang, dan Bekasi — mulai dari desain, sampel, produksi, hingga pengiriman.',
+      'Langkah lengkap memesan kantong plastik sablon logo di Jakarta, Bogor, Depok, Tangerang, dan Bekasi, mulai dari desain, sampel, produksi, hingga pengiriman.',
     category: 'Panduan Order',
     date: '2026-10-05',
     keywords: ['plastik sablon jabodetabek', 'cetak kantong plastik logo', 'pabrik plastik tangerang', 'plastik custom jakarta'],
@@ -125,17 +125,17 @@ const articles = [
 
 <h2>5 langkah memesan plastik sablon</h2>
 <ol>
-  <li><strong>Siapkan desain atau logo</strong> — format vektor (AI, CDR, PDF, SVG) paling ideal. Jika belum punya, tim kami bisa membantu merapikan desain.</li>
-  <li><strong>Tentukan spesifikasi</strong> — bahan HD atau PP, ukuran, ketebalan, warna plastik, dan jumlah warna sablon.</li>
-  <li><strong>Terima penawaran</strong> — harga dihitung berdasarkan spesifikasi dan jumlah pesanan.</li>
-  <li><strong>Setujui mock-up</strong> — Anda akan menerima gambaran desain pada kantong sebelum produksi.</li>
-  <li><strong>Produksi & pengiriman</strong> — pesanan diproduksi dan dikirim ke lokasi Anda.</li>
+  <li><strong>Siapkan desain atau logo</strong>: format vektor (AI, CDR, PDF, SVG) paling ideal. Jika belum punya, tim kami bisa membantu merapikan desain.</li>
+  <li><strong>Tentukan spesifikasi</strong>: bahan HD atau PP, ukuran, ketebalan, warna plastik, dan jumlah warna sablon.</li>
+  <li><strong>Terima penawaran</strong>: harga dihitung berdasarkan spesifikasi dan jumlah pesanan.</li>
+  <li><strong>Setujui mock-up</strong>: Anda akan menerima gambaran desain pada kantong sebelum produksi.</li>
+  <li><strong>Produksi & pengiriman</strong>: pesanan diproduksi dan dikirim ke lokasi Anda.</li>
 </ol>
 
 <h2>Keuntungan memilih produsen di Jabodetabek</h2>
 <ul>
   <li><strong>Pengiriman lebih cepat</strong> dan biaya ongkir lebih hemat ke Jakarta, Bogor, Depok, Tangerang, dan Bekasi.</li>
-  <li><strong>Komunikasi mudah</strong> — konsultasi dan revisi desain bisa lebih responsif.</li>
+  <li><strong>Komunikasi mudah</strong>: konsultasi dan revisi desain bisa lebih responsif.</li>
   <li><strong>Repeat order praktis</strong> karena stok bisa dipesan ulang dengan cepat.</li>
 </ul>
 
@@ -168,10 +168,10 @@ const articles = [
 
 <h2>Kenapa PP populer untuk kemasan makanan?</h2>
 <ul>
-  <li><strong>Bening dan mengkilap</strong> — makanan terlihat lebih menggugah selera.</li>
+  <li><strong>Bening dan mengkilap</strong>: makanan terlihat lebih menggugah selera.</li>
   <li><strong>Lebih tahan panas</strong> dibanding plastik PE.</li>
   <li><strong>Mudah di-seal</strong> sehingga kemasan rapat dan higienis.</li>
-  <li><strong>Kaku dan rapi</strong> — cocok untuk display di etalase.</li>
+  <li><strong>Kaku dan rapi</strong>: cocok untuk display di etalase.</li>
 </ul>
 
 <h2>Contoh penggunaan plastik PP untuk usaha kuliner</h2>

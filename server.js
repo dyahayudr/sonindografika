@@ -91,6 +91,7 @@ const orgSchema = {
   '@type': ['Organization', 'LocalBusiness'],
   name: site.name,
   description: 'Produsen kantong plastik HD dan PP, polos maupun sablon custom, untuk area Jabodetabek.',
+  slogan: site.tagline,
   url: site.url,
   logo: site.url + '/img/logo.svg',
   telephone: site.phone,
