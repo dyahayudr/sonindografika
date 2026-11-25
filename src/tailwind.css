@@ -1,10 +1,12 @@
-/* Sumber CSS Tailwind v4 + daisyUI v5 (tema: dim).
+/* Sumber CSS Tailwind v4 + daisyUI v5 (tema kustom: limaplastik = palet ungu gelap asli situs).
    Hasil build: public/css/app.css  →  jalankan `npm run css` setelah mengubah file ini.
 
    - Prefix "d-": class daisyUI (btn, card, hero, steps, …) tidak bentrok dengan class lama situs.
    - source(none) + @source inline(...): Tailwind TIDAK memindai views, jadi tidak membuat utility
      yang namanya bentrok dengan class situs (.container, .prose, .hidden, …).
-     Mau memakai komponen daisyUI baru? Tambahkan class-nya ke daftar inline di bawah, lalu `npm run css`. */
+     Mau memakai komponen daisyUI baru? Tambahkan class-nya ke daftar inline di bawah, lalu `npm run css`.
+   - Ganti tema: ubah nilai warna di blok "daisyui/theme", atau pakai tema bawaan
+     (mis. `themes: dim --default;`) dan ubah data-theme di views/partials/head.ejs. */
 @import "tailwindcss" source(none);
 
 @source inline("d-btn d-btn-{primary,secondary,accent,neutral,outline,ghost,lg,sm,block}");
@@ -13,7 +15,44 @@
 @source inline("d-table d-collapse d-collapse-{title,content,plus,arrow}");
 
 @plugin "daisyui" {
-  themes: dim --default;
+  themes: false;
   prefix: "d-";
   logs: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "limaplastik";
+  default: true;
+  prefersdark: false;
+  color-scheme: dark;
+
+  --color-base-100: #0a0611;
+  --color-base-200: #120a1f;
+  --color-base-300: #1b1030;
+  --color-base-content: #f4f0fb;
+  --color-primary: #6d5bff;
+  --color-primary-content: #ffffff;
+  --color-secondary: #ff5fa8;
+  --color-secondary-content: #1a0610;
+  --color-accent: #d64bd6;
+  --color-accent-content: #ffffff;
+  --color-neutral: #ffffff;
+  --color-neutral-content: #120a1f;
+  --color-info: #7fd3ff;
+  --color-info-content: #06202e;
+  --color-success: #25d366;
+  --color-success-content: #04170b;
+  --color-warning: #ffc861;
+  --color-warning-content: #2a1a00;
+  --color-error: #ff6b9a;
+  --color-error-content: #2a0612;
+
+  --radius-selector: 1rem;
+  --radius-field: 2rem;
+  --radius-box: 1.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
 }
