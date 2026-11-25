@@ -12,9 +12,9 @@ const site = {
   locale: 'id_ID',
 
   // Kontak (GANTI semua dengan data asli)
-  whatsapp: '6281200000000', // format internasional tanpa "+" dan tanpa spasi
-  whatsappDisplay: '+62 812-0000-0000',
-  phone: '+62 21 0000 0000',
+  whatsapp: '6285111393611', // format internasional tanpa "+" dan tanpa spasi → wa.me/6285111393611
+  whatsappDisplay: '+62 851 1139 3611',
+  phone: '+62 851 1139 3611',
   email: 'info@sonindografika.com',
   address: {
     street: 'Jl. Contoh Industri No. 1',
