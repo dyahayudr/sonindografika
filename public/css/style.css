@@ -566,7 +566,7 @@ td:first-child { color: var(--text); }
   .filter-bar { display: flex; overflow-x: auto; }
   .wa-float { width: 54px; height: 54px; right: 16px; bottom: 16px; }
   .h-section { font-size: clamp(26px, 8.5vw, 40px); }
-  .page-hero .display { font-size: clamp(40px, 13vw, 64px); }
+  .page-hero .display { font-size: clamp(30px, 11vw, 64px); } /* judul halaman 1 baris di HP */
   .stats-strip > div { padding: 22px 18px; }
   .article-card, .feature, .step, .vm { padding: 24px 22px; }
   .material-card { padding: 24px 22px; }
