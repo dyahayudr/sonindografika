@@ -106,6 +106,11 @@ const orgSchema = {
   },
   geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
   hasMap: site.mapsUrl,
+  // Sesuai data/site.js → hours (Senin–Jumat 09.00–17.00, Sabtu 09.00–14.00, Minggu & tanggal merah tutup)
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '14:00' },
+  ],
   areaServed: site.areas.map((a) => ({ '@type': 'City', name: a })),
   sameAs: site.socials.map((s) => s.url),
   makesOffer: Object.values(materials).map((m) => ({

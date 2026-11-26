@@ -29,9 +29,9 @@ const site = {
   // Link "Buka di Google Maps"
   mapsUrl: 'https://maps.app.goo.gl/joNv26CNAwLaZeGb9',
   hours: [
-    { days: 'Senin – Jumat', time: '08.00 – 17.00' },
-    { days: 'Sabtu', time: '08.00 – 14.00' },
-    { days: 'Minggu & Libur', time: 'Tutup' },
+    { days: 'Senin – Jumat', time: '09.00 – 17.00' },
+    { days: 'Sabtu', time: '09.00 – 14.00' },
+    { days: 'Minggu & Tanggal Merah', time: 'Tutup' },
   ],
 
   socials: [
