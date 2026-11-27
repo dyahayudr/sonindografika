@@ -2,6 +2,34 @@
   'use strict';
   document.documentElement.classList.remove('no-js');
 
+  // Banner promo: ganti otomatis tiap 5 detik (berhenti saat kursor di atas banner / tab tidak aktif)
+  var slider = document.querySelector('[data-banner]');
+  if (slider) {
+    var slides = slider.querySelectorAll('.banner-slide');
+    var dots = slider.querySelectorAll('[data-banner-dot]');
+    var current = 0, timer = null;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var show = function (i) {
+      current = (i + slides.length) % slides.length;
+      slides.forEach(function (s, k) {
+        var on = k === current;
+        s.classList.toggle('is-active', on);
+        if (on) { s.removeAttribute('aria-hidden'); s.removeAttribute('tabindex'); }
+        else { s.setAttribute('aria-hidden', 'true'); s.setAttribute('tabindex', '-1'); }
+      });
+      dots.forEach(function (d, k) { d.setAttribute('aria-selected', String(k === current)); });
+    };
+    var start = function () { if (!reduce && slides.length > 1) { stop(); timer = setInterval(function () { show(current + 1); }, 5000); } };
+    var stop = function () { if (timer) { clearInterval(timer); timer = null; } };
+    dots.forEach(function (d) {
+      d.addEventListener('click', function (e) { e.preventDefault(); show(Number(d.dataset.bannerDot)); start(); });
+    });
+    slider.addEventListener('mouseenter', stop);
+    slider.addEventListener('mouseleave', start);
+    document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else start(); });
+    start();
+  }
+
   // Header shadow on scroll
   var header = document.querySelector('[data-header]');
   var onScroll = function () { header && header.classList.toggle('is-scrolled', window.scrollY > 10); };

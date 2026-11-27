@@ -6,3 +6,6 @@ brief/
 
 # Gambar referensi desain (bukan milik kita)
 *.webp
+
+# File mentah dari desainer
+*.zip

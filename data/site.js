@@ -35,8 +35,9 @@ const site = {
   ],
 
   socials: [
-    { name: 'Instagram', handle: '@sonindografika', url: 'https://instagram.com/sonindografika', icon: 'instagram' },
-    { name: 'Facebook', handle: 'LIMA PLASTIK', url: 'https://facebook.com/sonindografika', icon: 'facebook' },
+    { name: 'Instagram', handle: '@limaplastik', url: 'https://www.instagram.com/limaplastik', icon: 'instagram' },
+    { name: 'Facebook', handle: 'LIMA PLASTIK', url: 'https://www.facebook.com/profile.php?id=61596870005870', icon: 'facebook' },
+    // TikTok, YouTube, Tokopedia di bawah masih CONTOH (akun belum ada / belum dikirim)
     { name: 'TikTok', handle: '@sonindografika', url: 'https://tiktok.com/@sonindografika', icon: 'tiktok' },
     { name: 'YouTube', handle: 'LIMA PLASTIK', url: 'https://youtube.com/@sonindografika', icon: 'youtube' },
     { name: 'Tokopedia', handle: 'LIMA PLASTIK', url: 'https://tokopedia.com/sonindografika', icon: 'shop' },

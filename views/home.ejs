@@ -43,6 +43,23 @@
   </div>
 </section>
 
+<!-- ============ BANNER PROMO (slider 3 banner) ============ -->
+<section class="promo-banner" aria-label="Banner promo <%= site.name %>">
+  <div class="container">
+    <div class="banner-slider reveal" data-banner>
+      <% [1, 2, 3].forEach(function (n, i) { %>
+      <a class="banner-slide<%= i === 0 ? ' is-active' : '' %>" href="<%= site.whatsappLink() %>" target="_blank" rel="noopener" <% if (i) { %>aria-hidden="true" tabindex="-1"<% } %>>
+        <img src="/img/banner-<%= n %>.jpg" srcset="/img/banner-<%= n %>-820.jpg 820w, /img/banner-<%= n %>.jpg 1640w" sizes="(max-width: 1240px) 100vw, 1200px"
+             width="1640" height="602" alt="<%= site.name %>: <%= site.tagline %> WhatsApp <%= site.whatsappDisplay %>" <%= i === 0 ? '' : 'loading="lazy"' %>>
+      </a>
+      <% }) %>
+      <div class="banner-dots" role="tablist" aria-label="Pilih banner">
+        <% [1, 2, 3].forEach(function (n, i) { %><button type="button" role="tab" aria-label="Banner <%= n %>" aria-selected="<%= i === 0 %>" data-banner-dot="<%= i %>"></button><% }) %>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ STATS ============ -->
 <section aria-label="Angka LIMA PLASTIK">
   <div class="container">

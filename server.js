@@ -69,7 +69,7 @@ app.use((req, res, next) => {
   res.locals.canonical = site.url + (req.path === '/' ? '' : req.path);
   res.locals.year = new Date().getFullYear();
   res.locals.assetVersion = ASSET_VERSION;
-  res.locals.ogImage = site.url + '/img/og-image.png';
+  res.locals.ogImage = site.url + '/img/og-image.jpg';
 
   // Cache-busting gambar: tambahkan ?v=<versi> ke setiap src/href="/img/..." di HTML yang dirender,
   // supaya gambar yang diganti langsung tampil (tidak tertahan cache Cloudflare / browser).
@@ -79,6 +79,7 @@ app.use((req, res, next) => {
     render(view, options, (err, html) => {
       if (err) return callback ? callback(err) : next(err);
       html = html.replace(/((?:src|href)="\/img\/[^"?#]+)"/g, `$1?v=${ASSET_VERSION}"`);
+      html = html.replace(/srcset="[^"]*"/g, (attr) => attr.replace(/(\/img\/[^\s,?"]+)/g, `$1?v=${ASSET_VERSION}`));
       return callback ? callback(null, html) : res.send(html);
     });
   };
@@ -93,7 +94,7 @@ const orgSchema = {
   description: 'Produsen kantong plastik HD dan PP, polos maupun sablon custom, untuk area Jabodetabek.',
   slogan: site.tagline,
   url: site.url,
-  logo: site.url + '/img/logo.svg',
+  logo: site.url + '/img/logo-icon.png',
   telephone: site.phone,
   email: site.email,
   address: {
@@ -216,7 +217,7 @@ app.get('/artikel/:slug', (req, res, next) => {
         inLanguage: 'id-ID',
         mainEntityOfPage: url,
         author: { '@type': 'Organization', name: site.name, url: site.url },
-        publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: site.url + '/img/logo.svg' } },
+        publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: site.url + '/img/logo-icon.png' } },
       },
       {
         '@context': 'https://schema.org',
